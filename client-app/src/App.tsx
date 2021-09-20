@@ -26,16 +26,14 @@ function App() {
 
   return (
       <div>
-          <Header as="h2" icon="users" content="Reactivities" />
-          
-              <List>
-                  {activities.map((activity: Activity) => 
-                      <List.Item key={activity.id}>
-                        {activity.title}
-                      </List.Item>
-                  )}
-
-              </List>
+        <Header as="h2" icon="users" content="Reactivities" />
+        <List>
+            {activities.map((activity: Activity) => 
+                <List.Item key={activity.id}>
+                {activity.title}
+                </List.Item>
+            )}
+        </List>
     </div>
   );
 }

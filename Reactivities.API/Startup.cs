@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -5,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Reactivities.API.Extensions;
+using Reactivities.Application.Activities;
+using Reactivities.Application.Core;
 using Reactivities.Persistence;
 
 namespace Reactivities.API
@@ -24,23 +28,7 @@ namespace Reactivities.API
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Reactivities.API", Version = "v1" });
-            });
-
-            services.AddDbContext<DataContext>(opt =>
-            {
-                opt.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
-            });
-
-            services.AddCors(opt =>
-            {
-                opt.AddPolicy("CorsPolicy", policy =>
-                {
-                    policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
-                });
-            });
+            services.AddApplicationServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
