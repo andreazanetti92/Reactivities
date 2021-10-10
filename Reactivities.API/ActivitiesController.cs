@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Reactivities.API
 {
+    [AllowAnonymous]
     public class ActivitiesController : BaseApiController
     {
 
