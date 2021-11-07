@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactivities.API", "Reactivities.API\Reactivities.API.csproj", "{E3B8CB44-7A38-4340-8B56-D7E6D4C3FFDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.API", "Reactivities.API\Reactivities.API.csproj", "{E3B8CB44-7A38-4340-8B56-D7E6D4C3FFDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactivities.Application", "Reactivities.Application\Reactivities.Application.csproj", "{53C1FC43-BB14-4743-9C9A-70726C9FABD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.Application", "Reactivities.Application\Reactivities.Application.csproj", "{53C1FC43-BB14-4743-9C9A-70726C9FABD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactivities.Persistence", "Reactivities.Persistence\Reactivities.Persistence.csproj", "{3C6778E9-7FB5-443F-B7C4-4746C2BE8DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.Persistence", "Reactivities.Persistence\Reactivities.Persistence.csproj", "{3C6778E9-7FB5-443F-B7C4-4746C2BE8DD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactivities.Domain", "Reactivities.Domain\Reactivities.Domain.csproj", "{77D73D10-89A1-4A8C-BFE7-0086A29FC507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.Domain", "Reactivities.Domain\Reactivities.Domain.csproj", "{77D73D10-89A1-4A8C-BFE7-0086A29FC507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactivities.Infrastructure", "Reactivities.Infrastructure\Reactivities.Infrastructure.csproj", "{2DE1577C-AEC1-44D7-A35D-75663DE56155}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{77D73D10-89A1-4A8C-BFE7-0086A29FC507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77D73D10-89A1-4A8C-BFE7-0086A29FC507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77D73D10-89A1-4A8C-BFE7-0086A29FC507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE1577C-AEC1-44D7-A35D-75663DE56155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE1577C-AEC1-44D7-A35D-75663DE56155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE1577C-AEC1-44D7-A35D-75663DE56155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE1577C-AEC1-44D7-A35D-75663DE56155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
