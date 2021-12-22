@@ -1,3 +1,6 @@
+import { BooleanSchema } from "yup";
+import { Profile } from "./Profile";
+
 export interface Activity {
     id: string,
     title: string,
@@ -6,4 +9,10 @@ export interface Activity {
     description: string,
     city: string,
     venue: string,
+    hostUsername?: string;
+    isCancelled?: boolean;
+    isGoing?: boolean;
+    isHost?: boolean;
+    host?: Profile
+    attendees?:  Profile[];
 }
