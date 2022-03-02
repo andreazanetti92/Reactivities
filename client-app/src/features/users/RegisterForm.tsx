@@ -42,7 +42,7 @@ export default observer(function RegisterForm(){
             positive 
             fluid 
             content='Register' 
-            type='Submit' 
+            type='submit' 
           />
         </Form>
       )}
