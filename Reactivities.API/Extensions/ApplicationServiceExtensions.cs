@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,9 +10,7 @@ using Reactivities.Application.Interfaces;
 using Reactivities.Infrastructure.Security;
 using Reactivities.Persistence;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Reactivities.API.Extensions
 {
@@ -26,7 +25,10 @@ namespace Reactivities.API.Extensions
 
             services.AddDbContext<DataContext>(opt =>
             {
-                opt.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+                //opt.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+                var conn = new SqliteConnection(config.GetConnectionString("DefaultConnection"));
+                opt.UseSqlite(conn);
+                //opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
 
             services.AddCors(opt =>

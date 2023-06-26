@@ -62,6 +62,7 @@ axios.interceptors.response.use(async res => {
 
 const responseBoby = <T> (res: AxiosResponse<T>) => res.data;
 
+// Abstraction
 const requests = {
   get:<T> (path: string) => axios.get<T>(path).then(responseBoby),
   post:<T> (path: string, data: {}) => axios.post<T>(path, data).then(responseBoby),
